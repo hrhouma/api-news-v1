@@ -2,8 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const cors = require('cors');
+
 
 const app = express();
+
+// Utilisation de CORS pour permettre les requêtes provenant d'autres origines
+app.use(cors());
 
 // Configuration de Swagger
 const options = {
